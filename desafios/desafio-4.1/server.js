@@ -4,7 +4,8 @@ const routes = require('./routes'); // add arquivo de rotas
 
 const server = express(); // servidor usando express.js
 
-server.use(express.static('public'));
+server.use(express.static('public')); // servidor usar a pasta public como arquivo estático
+server.use(routes); // para usar rotas de routes
 
 server.set('view engine', 'njk');
 
